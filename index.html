@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#05070a">
+<title>Pizarro Studios | Applied AI Systems</title>
+<meta name="description" content="Pizarro Studios builds applied AI systems, automation, web modernization, and business tools with evidence-first delivery.">
+<style>
+:root{
+  --bg:#05070a;
+  --panel:#0a1015;
+  --panel2:#0d151b;
+  --line:#1a2a31;
+  --cyan:#55d8e8;
+  --cyan2:#2e737d;
+  --amber:#e8934f;
+  --text:#edf4f5;
+  --muted:#8a9aa0;
+  --good:#8bc99a;
+  --max:1120px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:
+    radial-gradient(circle at 80% 0%,rgba(85,216,232,.08),transparent 30%),
+    radial-gradient(circle at 10% 20%,rgba(232,147,79,.05),transparent 24%),
+    var(--bg);
+  color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Arial,sans-serif;
+}
+a{color:inherit;text-decoration:none}
+button,a{-webkit-tap-highlight-color:transparent}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+.skip{position:absolute;left:-9999px;top:8px;z-index:100;background:var(--text);color:var(--bg);padding:10px 14px;border-radius:8px;font-weight:800}
+.skip:focus{left:12px}
+.shell{width:min(var(--max),calc(100% - 32px));margin:auto}
+.mono,.eyebrow,.label,.status,.proof-tag,.nav a,.kicker{
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+.top{
+  position:sticky;top:0;z-index:50;
+  background:rgba(5,7,10,.86);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+.topin{
+  min-height:64px;display:flex;align-items:center;justify-content:space-between;gap:18px
+}
+.brand{font-weight:800;letter-spacing:.13em;font-size:12px}
+.brand b{color:var(--cyan)}
+.nav{display:flex;gap:4px;align-items:center}
+.nav a{
+  color:var(--muted);font-size:10px;letter-spacing:.04em;
+  padding:9px 10px;border-radius:8px
+}
+.nav a:hover{color:var(--text);background:#0d161c}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:46px;padding:0 17px;border-radius:10px;
+  border:1px solid var(--line);font-weight:750;font-size:13px;
+  transition:.18s ease;
+}
+.btn:hover{transform:translateY(-1px)}
+.btn.primary{
+  border-color:var(--amber);
+  background:linear-gradient(135deg,rgba(232,147,79,.18),rgba(232,147,79,.08));
+}
+.btn.secondary{
+  border-color:var(--cyan2);
+  background:rgba(85,216,232,.06);
+}
+.hero{padding:90px 0 58px}
+.eyebrow{
+  color:var(--cyan);font-size:11px;letter-spacing:.16em;text-transform:uppercase
+}
+.hero h1{
+  margin:12px 0 18px;
+  max-width:900px;
+  font-size:clamp(46px,8vw,84px);
+  line-height:.96;
+  letter-spacing:-.045em
+}
+.hero .lead{
+  color:#c5d0d2;
+  max-width:760px;
+  font-size:clamp(17px,2vw,20px);
+  line-height:1.6;
+  margin:0
+}
+.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+.trustline{
+  margin-top:34px;padding-top:18px;border-top:1px solid var(--line);
+  display:flex;gap:10px;flex-wrap:wrap
+}
+.proof-tag{
+  color:var(--muted);font-size:9px;letter-spacing:.07em;
+  border:1px solid var(--line);border-radius:999px;padding:7px 9px
+}
+.proof-tag strong{color:var(--text)}
+section{padding:58px 0}
+.section-head{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:end;margin-bottom:24px}
+.label{font-size:10px;letter-spacing:.16em;color:var(--cyan);text-transform:uppercase;margin-bottom:9px}
+.section-head h2{font-size:clamp(30px,5vw,48px);line-height:1.03;margin:0;letter-spacing:-.03em}
+.section-head p{margin:0;color:var(--muted);line-height:1.65;max-width:580px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.card{
+  border:1px solid var(--line);
+  background:linear-gradient(180deg,var(--panel2),var(--panel));
+  border-radius:16px;padding:19px
+}
+.card h3{font-size:20px;margin:8px 0 9px}
+.card p{color:#bdc9cc;font-size:14px;line-height:1.6;margin:0}
+.status{
+  display:inline-flex;font-size:9px;letter-spacing:.08em;
+  padding:6px 8px;border:1px solid var(--cyan2);border-radius:999px;color:var(--cyan)
+}
+.status.applied{color:var(--good);border-color:#426e50}
+.status.demo{color:var(--amber);border-color:#76522e}
+.evidence{margin:16px 0 0;padding:0;list-style:none}
+.evidence li{
+  color:var(--muted);font-size:12px;line-height:1.5;
+  padding:8px 0;border-top:1px solid var(--line)
+}
+.evidence b{color:var(--text)}
+.card-link{display:inline-block;margin-top:14px;color:var(--cyan);font-size:12px;font-weight:750}
+.services{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.service{
+  border:1px solid var(--line);border-radius:16px;padding:22px;background:#081016
+}
+.kicker{color:var(--amber);font-size:9px;letter-spacing:.1em}
+.service h3{margin:8px 0 8px;font-size:22px}
+.service p{color:var(--muted);line-height:1.6;margin:0}
+.process{
+  display:grid;grid-template-columns:repeat(5,1fr);
+  gap:8px;counter-reset:steps
+}
+.step{
+  border:1px solid var(--line);border-radius:13px;padding:15px;background:#081016;
+  min-height:145px
+}
+.step:before{
+  counter-increment:steps;content:"0" counter(steps);
+  display:block;color:var(--amber);font:800 10px/1 ui-monospace,SFMono-Regular,Menlo,monospace;
+  margin-bottom:22px
+}
+.step b{display:block;font-size:14px;margin-bottom:7px}
+.step span{color:var(--muted);font-size:12px;line-height:1.5}
+.proofbox{
+  border:1px solid var(--cyan2);border-radius:18px;padding:24px;
+  background:linear-gradient(135deg,rgba(85,216,232,.07),rgba(232,147,79,.04))
+}
+.proofbox h3{font-size:28px;margin:0 0 10px}
+.proofbox p{color:#c3ced0;line-height:1.65;margin:0;max-width:830px}
+.proof-rules{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:18px}
+.rule{
+  border:1px solid var(--line);border-radius:11px;padding:13px;background:#071016
+}
+.rule b{display:block;font-size:12px;margin-bottom:5px}
+.rule span{color:var(--muted);font-size:11px;line-height:1.45}
+.about{
+  display:grid;grid-template-columns:1.2fr .8fr;gap:12px
+}
+.about .card{padding:24px}
+.about h2{font-size:36px;margin:6px 0 12px}
+.about p{color:#bdc9cc;line-height:1.7}
+.contact{
+  border:1px solid var(--amber);border-radius:18px;padding:28px;
+  background:linear-gradient(135deg,rgba(232,147,79,.08),rgba(85,216,232,.04))
+}
+.contact h2{font-size:clamp(30px,5vw,48px);margin:7px 0 12px}
+.contact p{color:#c5d0d2;line-height:1.6;max-width:720px}
+.contact-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+footer{
+  border-top:1px solid var(--line);
+  color:var(--muted);font-size:11px;line-height:1.6;padding:28px 0 40px
+}
+footer b{color:var(--text)}
+@media(max-width:820px){
+  .nav a:not(.nav-cta){display:none}
+  .hero{padding:66px 0 44px}
+  .section-head{grid-template-columns:1fr}
+  .grid{grid-template-columns:1fr}
+  .services{grid-template-columns:1fr}
+  .process{grid-template-columns:1fr 1fr}
+  .proof-rules{grid-template-columns:1fr 1fr}
+  .about{grid-template-columns:1fr}
+}
+@media(max-width:520px){
+  .shell{width:min(var(--max),calc(100% - 24px))}
+  .hero h1{font-size:46px}
+  .process{grid-template-columns:1fr}
+  .proof-rules{grid-template-columns:1fr}
+  .btn{width:100%}
+  .nav .btn{width:auto}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+<header class="top">
+  <div class="shell topin">
+    <a class="brand" href="#top">PIZARRO <b>//</b> STUDIOS</a>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="#work">WORK</a>
+      <a href="#services">SERVICES</a>
+      <a href="#process">PROCESS</a>
+      <a href="#about">ABOUT</a>
+      <a class="btn primary nav-cta" href="#contact">START A CONVERSATION</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div id="top"></div>
+  <section class="hero">
+    <div class="shell">
+      <div class="eyebrow">Applied AI systems · automation · web modernization</div>
+      <h1>Turn business problems into working systems.</h1>
+      <p class="lead">
+        Pizarro Studios designs and builds AI-assisted workflows, business tools, web experiences, and product prototypes. The standard is simple: define the problem, build the smallest useful system, test it, and show the evidence.
+      </p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#work">VIEW THE WORK</a>
+        <a class="btn secondary" href="#contact">DISCUSS A BUSINESS PROBLEM</a>
+      </div>
+      <div class="trustline">
+        <div class="proof-tag"><strong>Truthful status labels</strong> · prototype ≠ deployment</div>
+        <div class="proof-tag"><strong>Evidence-first</strong> · claims tied to tests</div>
+        <div class="proof-tag"><strong>Security-aware</strong> · no exposed credentials or fake integrations</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="shell">
+      <div class="section-head">
+        <div>
+          <div class="label">Selected work</div>
+          <h2>Proof before portfolio padding.</h2>
+        </div>
+        <p>
+          A smaller set of serious projects is more useful than a wall of concepts. Each project is labeled by what actually exists, what has been tested, and what still blocks real-world use.
+        </p>
+      </div>
+
+      <div class="grid">
+        <article class="card">
+          <span class="status">MVP · BLOCKED ON OTP</span>
+          <h3>Veridoc</h3>
+          <p>Document authenticity, signer verification, tamper analysis, and AI-assisted forensic decision support.</p>
+          <ul class="evidence">
+            <li><b>Evidence:</b> 19/19 backend tests passed.</li>
+            <li><b>Flow:</b> Register → sign → tamper → analyze → audit demonstrated.</li>
+            <li><b>Current gate:</b> Real OTP email delivery and public verification.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <span class="status applied">INTERACTIVE PROTOTYPE</span>
+          <h3>MTI-JATT Digital Apprenticeship Experience</h3>
+          <p>A guided apprenticeship experience for trade discovery, readiness, documents, application steps, and accessible information.</p>
+          <ul class="evidence">
+            <li><b>Built:</b> Interactive multi-screen prototype.</li>
+            <li><b>Designed:</b> Readiness engine, searchable guidance, and applicant workflow.</li>
+            <li><b>Current gate:</b> Stakeholder validation and verified production content.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <span class="status demo">SELF-INITIATED DEMO</span>
+          <h3>CCS Website Modernization</h3>
+          <p>A replacement concept for clearer commercial-service navigation, stronger trust signals, and better conversion paths.</p>
+          <ul class="evidence">
+            <li><b>Built:</b> Multi-page replacement prototype.</li>
+            <li><b>Reviewed:</b> Multiple audit and critique cycles.</li>
+            <li><b>Important:</b> Not adopted as the company production site.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="shell">
+      <div class="section-head">
+        <div>
+          <div class="label">What Pizarro Studios does</div>
+          <h2>Build where the business is losing time or clarity.</h2>
+        </div>
+        <p>
+          The offer is not “AI for everything.” The work starts with a specific bottleneck and only adds AI when it makes the system more useful.
+        </p>
+      </div>
+
+      <div class="services">
+        <div class="service">
+          <div class="kicker">01 · AI IMPLEMENTATION</div>
+          <h3>AI workflows that do real work</h3>
+          <p>Map a repetitive process, identify where AI or automation helps, connect the pieces, and test the result against the original problem.</p>
+        </div>
+        <div class="service">
+          <div class="kicker">02 · BUSINESS SYSTEMS</div>
+          <h3>Operational tools and internal workflows</h3>
+          <p>Turn scattered information and manual steps into a clearer system for decisions, handoffs, tracking, or customer service.</p>
+        </div>
+        <div class="service">
+          <div class="kicker">03 · WEB MODERNIZATION</div>
+          <h3>Websites built around decisions</h3>
+          <p>Improve information structure, trust, calls to action, accessibility, and the path from visitor to the next useful action.</p>
+        </div>
+        <div class="service">
+          <div class="kicker">04 · PROTOTYPING</div>
+          <h3>Test an idea before overbuilding it</h3>
+          <p>Define the smallest version that can prove the core assumption, build it, break it, collect feedback, and decide what deserves another round.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="process">
+    <div class="shell">
+      <div class="section-head">
+        <div>
+          <div class="label">Execution standard</div>
+          <h2>From problem to proof.</h2>
+        </div>
+        <p>
+          The process is deliberately less glamorous than “AI transformation.” It exists to stop prototypes from being confused with finished products.
+        </p>
+      </div>
+
+      <div class="process">
+        <div class="step"><b>Define</b><span>Clarify the user, problem, desired outcome, and what “working” means.</span></div>
+        <div class="step"><b>Design</b><span>Choose the smallest useful workflow, integration, or product path.</span></div>
+        <div class="step"><b>Build</b><span>Create the working version without hiding missing dependencies behind mock behavior.</span></div>
+        <div class="step"><b>Verify</b><span>Test normal use, edge cases, security concerns, and end-to-end behavior.</span></div>
+        <div class="step"><b>Prove</b><span>Attach claims to evidence, document limits, and decide whether it is ready to pilot or release.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="shell">
+      <div class="proofbox">
+        <div class="label">Proof standard</div>
+        <h3>No invented validation.</h3>
+        <p>
+          Pizarro Studios separates what was designed, what was built, what was tested, what was adopted, and what produced a measured result. Work-in-progress stays visible where useful, but it is not presented as customer success.
+        </p>
+        <div class="proof-rules">
+          <div class="rule"><b>STATUS</b><span>Idea, prototype, MVP, pilot, deployed, or validated.</span></div>
+          <div class="rule"><b>EVIDENCE</b><span>Tests, screenshots, demos, logs, deployments, or stakeholder feedback.</span></div>
+          <div class="rule"><b>LIMITS</b><span>Known blockers and unverified assumptions are stated plainly.</span></div>
+          <div class="rule"><b>SECURITY</b><span>Credentials, private prompts, internal controls, and sensitive data stay private.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="shell">
+      <div class="about">
+        <div class="card">
+          <div class="label">About Pizarro Studios</div>
+          <h2>Applied AI, judged by usefulness.</h2>
+          <p>
+            Pizarro Studios is being built around AI implementation, automation, web modernization, and business systems. The goal is not to make every prototype look like a startup. The goal is to turn serious problems into inspectable work, learn from what fails, and build a body of evidence that compounds.
+          </p>
+        </div>
+        <div class="card">
+          <div class="label">Open to</div>
+          <h3>Real problems and serious collaboration</h3>
+          <p>
+            Business implementation work, pilots, technical collaboration, contract opportunities, and useful critique are all welcome when the problem is concrete and the work can be tested.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="shell">
+      <div class="contact">
+        <div class="label">Start here</div>
+        <h2>Bring the bottleneck, not the buzzwords.</h2>
+        <p>
+          If a business process wastes time, a website creates friction, or an AI idea needs to be tested before it becomes another expensive science project, start with the problem.
+        </p>
+        <div class="contact-actions">
+          <a class="btn primary" href="tel:+14706698312">CALL 470-669-8312</a>
+          <a class="btn secondary" href="sms:+14706698312">TEXT PIZARRO STUDIOS</a>
+          <a class="btn secondary" href="https://instagram.com/Kin5pizarro" target="_blank" rel="noopener noreferrer">INSTAGRAM @KIN5PIZARRO</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="shell">
+    <b>© 2026 Pizarro Studios. All rights reserved.</b><br>
+    Pizarro Studios™ is used as a trademark claim and does not represent federal registration. Project statuses are intentionally conservative. Third-party names and materials remain subject to their owners' rights.
+  </div>
+</footer>
+
+</body>
+</html>
