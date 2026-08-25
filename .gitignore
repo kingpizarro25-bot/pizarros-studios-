@@ -1,0 +1,16 @@
+node_modules/
+.DS_Store
+
+# Local media/tooling installs
+cinematic/pylibs/
+
+# Raw generation/review artifacts stay local unless explicitly published
+cinematic/generated/
+cinematic/approved/
+cinematic/contact-sheet/
+cinematic/review-latest-clips.html
+
+# Local browser/test output
+output/playwright/
+playwright-report/
+test-results/

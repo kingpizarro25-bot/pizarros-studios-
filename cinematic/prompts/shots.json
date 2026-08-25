@@ -1,0 +1,85 @@
+{
+  "film": "From Chaos to Intelligence",
+  "version": "1.0",
+  "total_duration_seconds": 40,
+  "aspect_ratio": "16:9",
+  "keyframe_model": "nano_banana_pro",
+  "keyframe_params": { "resolution": "2k", "aspect_ratio": "16:9" },
+  "video_model": "seedance_2_0",
+  "video_params": { "aspect_ratio": "16:9", "duration": 4, "resolution": "1080p", "generate_audio": false },
+  "standard_suffix": "cinematic, photographic, shot on ARRI Alexa, anamorphic lens, deep pure blacks with unlifted shadows, single motivated light source, high dynamic range, restrained colour, brushed aluminium and graphite and dark glass materials, generous negative space, precise composition, subtle 35mm film grain, no colour cast",
+  "standard_negative": "glowing AI brain, humanoid robot, floating hologram, blue neon, falling code, cyberpunk city, lens flare, futuristic HUD, glowing grid, circuit board, stock office photo, smiling people at laptops, purple blue gradient, 3D render look, plastic sheen, warped text, distorted hands, extra fingers, watermark, oversaturated, blurry, smeared motion, low contrast, lifted blacks",
+  "shots": [
+    {
+      "index": 1, "act": 1, "title": "Scattered documents", "duration": 3.0,
+      "keyframe_prompt": "Extreme close-up macro shot, 100mm lens, scattered white paper documents overlapping at irregular angles on a dark graphite desk surface, shallow depth of field with only two pages in focus, single hard directional light from low left, deep pure black shadows on the right side of frame, no fill light, cold neutral grey colour, fine paper fibre texture visible, one bent corner, pre-dawn office interior",
+      "motion_prompt": "camera slowly dollying right, documents completely still, subtle dust in the air",
+      "negative": "any cyan, screens, people, hands, readable text, warm light"
+    },
+    {
+      "index": 2, "act": 1, "title": "The disconnected room", "duration": 3.5,
+      "keyframe_prompt": "Wide establishing shot, 24mm lens, empty modern open-plan office interior before dawn, seven computer monitors glowing at different brightnesses and slightly mismatched colour temperatures, isolated pools of light that do not connect, completely dark ceiling, large windows with faint cold blue-grey pre-dawn light outside, clean architectural lines, deep blacks, no people",
+      "motion_prompt": "camera very slowly dollying forward down the room, monitors flickering slightly out of sync",
+      "negative": "cyan, city skyline, warm office lighting, ceiling lights on, people"
+    },
+    {
+      "index": 3, "act": 1, "title": "Notifications in glass", "duration": 3.0,
+      "keyframe_prompt": "Close-up, 85mm lens, a smartphone lying face up on a dark desk seen as a reflection in a pane of dark tinted glass in the foreground, notification banners stacking on the screen, a human hand resting still on the desk beside it not reaching, phone screen is the only key light and is cold and hard, one soft dull amber desk lamp far out of focus in the background, deep black surroundings, shallow depth of field",
+      "motion_prompt": "static camera, notification banners appearing one after another on the phone screen, hand completely still, focus shifting from the glass reflection to the hand",
+      "negative": "readable text, a face, cyan, bright room light, distorted hand, extra fingers"
+    },
+    {
+      "index": 4, "act": 2, "title": "The line is born", "duration": 3.0,
+      "keyframe_prompt": "Extreme close-up macro, 100mm lens, a single thin bright cyan line of light drawing itself along the machined edge of a dark graphite desk, the line hugs the physical surface exactly and does not float, one white paper document edge catching the cyan light as the line passes it, deep black background, hard side light from low left, shallow depth of field",
+      "motion_prompt": "camera sliding slowly left, the cyan line extending steadily along the desk edge at constant speed, paper edge straightening as the line passes",
+      "negative": "floating light, particles, sparks, multiple lines, glow flooding the frame"
+    },
+    {
+      "index": 5, "act": 2, "title": "Order from above", "duration": 3.5,
+      "keyframe_prompt": "Overhead top-down shot, 50mm lens, camera directly above a dark graphite desk, white paper documents in a precise aligned grid formation, a single thin cyan light line running along the desk seam at the bottom of frame, even cool side lighting, deep blacks, clean composition with generous negative space",
+      "motion_prompt": "camera rising slowly straight up, paper documents sliding and rotating into aligned grid formation, settling smoothly without bouncing",
+      "negative": "hands, people, floating paper, glowing paper, readable text"
+    },
+    {
+      "index": 6, "act": 2, "title": "The room syncs", "duration": 3.5,
+      "keyframe_prompt": "Tracking shot composition, 35mm lens, a row of desks in a dark modern office seen from the side with strong foreground and background separation, a thin cyan light line travelling along the wall seam behind the desks, computer monitors showing one consistent cool tone, dark ceiling, no people, deep blacks",
+      "motion_prompt": "camera tracking sideways past the desks with strong parallax, cyan line travelling along the wall seam, each monitor shifting to matching colour as the line passes it",
+      "negative": "floating line, neon spread, readable code, people, overhead lighting"
+    },
+    {
+      "index": 7, "act": 3, "title": "Verification", "duration": 3.0,
+      "keyframe_prompt": "Close-up, 50mm lens, a computer monitor shot at an oblique angle through a dark glass partition, faint reflection of the room visible on the glass, on the screen a restrained dark user interface with small monospaced labels checking a document line by line, thin cyan accent details, one small green confirmation indicator, most on-screen text too small to read and slightly out of focus, deep blacks",
+      "motion_prompt": "static camera, rows of small check indicators resolving down the document on screen, one green confirmation appearing at the end",
+      "negative": "fake sci-fi interface, circular scanner, rotating globe, code rain, large readable text, bright white interface, screen flat-on to camera"
+    },
+    {
+      "index": 8, "act": 3, "title": "One system", "duration": 3.5,
+      "keyframe_prompt": "High wide shot, 24mm lens, looking down across a dark modern office from above, thin cyan light lines running along wall seams ceiling joins and floor edges connecting the workstations, subtle and architectural like integrated lighting design, one small warm amber lamp glowing in the far distance, first faint dawn light at the large windows, deep blacks, no people visible",
+      "motion_prompt": "camera craning slowly upward, cyan architectural lines glowing steadily, dawn light very slowly increasing at the windows",
+      "negative": "network diagram, glowing nodes, holographic map, dotted connection lines, floating data"
+    },
+    {
+      "index": 9, "act": 3, "title": "The decision", "duration": 2.5,
+      "keyframe_prompt": "Extreme close-up, 85mm lens, a single human hand at a desk lit from the left by a warm amber practical lamp and from the right by a cool cyan screen glow, both light sources balanced and equally strong, one finger making a single deliberate press, no face visible, dark background, anatomically correct hand with five fingers, shallow depth of field",
+      "motion_prompt": "static camera, one finger pressing down once slowly and deliberately, then stillness",
+      "negative": "distorted hands, extra fingers, a face, glowing keyboard, dramatic gesture"
+    },
+    {
+      "index": 10, "act": 3, "title": "Craft", "duration": 3.0,
+      "keyframe_prompt": "Macro product shot, 100mm lens, a solid brushed aluminium block with extremely fine precision-machined parallel grooves across its face, one narrow hard light raking across the metal grain, thin cyan rim light on a single edge, pure black background, no other objects, real manufactured object with believable tooling marks",
+      "motion_prompt": "camera arcing slowly around the aluminium block, hard light sweeping across the machined grooves",
+      "negative": "glowing object, floating object, chrome, plastic render, sci-fi prop, logo, text, particles"
+    },
+    {
+      "index": 11, "act": 4, "title": "Dawn", "duration": 4.0,
+      "keyframe_prompt": "Wide shot, 24mm lens, a modern open-plan office at dawn, warm golden daylight entering through large windows, desks tidy and ordered, monitors showing consistent calm content, thin cyan light lines dimmed and at rest along the architecture, one person standing small in silhouette at a far window looking out, deep focus with everything sharp front to back, soft wide natural lighting",
+      "motion_prompt": "camera gliding forward almost imperceptibly, dawn light slowly warming, the distant figure completely still",
+      "negative": "shallow focus, lens flare, sun stars, visible face, busy activity, neon"
+    },
+    {
+      "index": 12, "act": 4, "title": "Title card", "duration": 4.5,
+      "generate": false,
+      "note": "Built in the video editor, not generated. AI tools warp lettering. Specification is in the storyboard."
+    }
+  ]
+}
