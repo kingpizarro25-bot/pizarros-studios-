@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">Pizarro2.0 public architecture</title>
+<desc id="desc">A public-safe overview of Pizarro2.0 showing Mission Control, registered workers, shared state, independent verification, evidence, and human approval gates.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#071018"/>
+    <stop offset="1" stop-color="#0d1822"/>
+  </linearGradient>
+  <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#10202b"/>
+    <stop offset="1" stop-color="#0c1720"/>
+  </linearGradient>
+  <style>
+    .t{font-family:Inter,Segoe UI,Arial,sans-serif;fill:#edf4f5}
+    .m{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;fill:#93a6ad}
+    .h{font-weight:800}
+    .small{font-size:24px}
+    .body{font-size:30px}
+    .title{font-size:76px;letter-spacing:-2px}
+    .sub{font-size:32px;fill:#b8c7cc}
+    .box{fill:url(#panel);stroke:#29404d;stroke-width:2}
+    .accent{stroke:#55d8e8;stroke-width:4;fill:none}
+    .accent2{stroke:#e8934f;stroke-width:4;fill:none}
+    .cyan{fill:#55d8e8}
+    .amber{fill:#e8934f}
+    .good{fill:#8bc99a}
+  </style>
+</defs>
+<rect width="1600" height="900" fill="url(#bg)"/>
+<text x="80" y="105" class="t title h">Pizarro2.0</text>
+<text x="80" y="158" class="t sub">AI Mission Control for real work</text>
+<text x="80" y="210" class="m small">PUBLIC-SAFE ARCHITECTURE SNAPSHOT · INTERNAL MVP</text>
+
+<rect x="80" y="275" rx="24" width="255" height="160" class="box"/>
+<text x="207" y="330" text-anchor="middle" class="t body h">Goal</text>
+<text x="207" y="375" text-anchor="middle" class="t small">One request</text>
+<text x="207" y="410" text-anchor="middle" class="t small">from the owner</text>
+
+<rect x="410" y="255" rx="24" width="310" height="200" class="box"/>
+<text x="565" y="315" text-anchor="middle" class="cyan body h">Mission Control</text>
+<text x="565" y="360" text-anchor="middle" class="t small">Prioritize</text>
+<text x="565" y="395" text-anchor="middle" class="t small">Route</text>
+<text x="565" y="430" text-anchor="middle" class="t small">Track state</text>
+
+<rect x="805" y="255" rx="24" width="310" height="200" class="box"/>
+<text x="960" y="315" text-anchor="middle" class="amber body h">Workers</text>
+<text x="960" y="360" text-anchor="middle" class="t small">Claude Code</text>
+<text x="960" y="395" text-anchor="middle" class="t small">Codex</text>
+<text x="960" y="430" text-anchor="middle" class="m small">More workers only after verification</text>
+
+<rect x="1195" y="255" rx="24" width="325" height="200" class="box"/>
+<text x="1357" y="315" text-anchor="middle" class="t body h">Shared State</text>
+<text x="1357" y="360" text-anchor="middle" class="t small">Tasks · Decisions</text>
+<text x="1357" y="395" text-anchor="middle" class="t small">Handoffs · Evidence</text>
+<text x="1357" y="430" text-anchor="middle" class="m small">Newest verified evidence wins</text>
+
+<path d="M335 355 H410" class="accent"/>
+<path d="M720 355 H805" class="accent"/>
+<path d="M1115 355 H1195" class="accent"/>
+
+<rect x="250" y="560" rx="24" width="360" height="190" class="box"/>
+<text x="430" y="620" text-anchor="middle" class="t body h">Independent Review</text>
+<text x="430" y="670" text-anchor="middle" class="t small">Worker ≠ verifier</text>
+<text x="430" y="710" text-anchor="middle" class="m small">No agent approves its own work</text>
+
+<rect x="700" y="560" rx="24" width="360" height="190" class="box"/>
+<text x="880" y="620" text-anchor="middle" class="t body h">Evidence</text>
+<text x="880" y="670" text-anchor="middle" class="t small">Tests · logs · artifacts</text>
+<text x="880" y="710" text-anchor="middle" class="m small">Claims are not completion</text>
+
+<rect x="1150" y="560" rx="24" width="370" height="190" class="box"/>
+<text x="1335" y="620" text-anchor="middle" class="t body h">Human Gate</text>
+<text x="1335" y="670" text-anchor="middle" class="t small">Routine work can continue</text>
+<text x="1335" y="710" text-anchor="middle" class="m small">Sensitive or irreversible actions stop</text>
+
+<path d="M960 455 V510 H430 V560" class="accent2"/>
+<path d="M610 655 H700" class="accent"/>
+<path d="M1060 655 H1150" class="accent"/>
+
+<text x="80" y="835" class="t small h">Verified public facts:</text>
+<text x="335" y="835" class="m small">live ChatGPT ↔ Pizarro tool connection · shared state records · Claude + Codex registered in Core · private implementation remains private</text>
+</svg>
