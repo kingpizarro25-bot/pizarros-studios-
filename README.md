@@ -26,3 +26,10 @@ The page intentionally distinguishes prototypes, MVPs, and demonstrated work fro
 `cinematic/` holds the visual and video system for Pizarro Studios — the rulebook, the shot-by-shot
 plan for the first brand film, paste-ready generation prompts, sound direction, and the code for
 putting video on this site. Start at `cinematic/README.md`.
+
+
+## Pizarro2.0 public showcase
+
+A sanitized public overview of the Pizarro2.0 Mission Control architecture is available in [PIZARRO2-PUBLIC.md](PIZARRO2-PUBLIC.md).
+
+The real implementation repository remains private. The public showcase excludes credentials, tunnel identifiers, local paths, security-sensitive details, and private data.
